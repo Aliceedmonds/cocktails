@@ -1,0 +1,98 @@
+body {
+  
+    background: #f6ebf4;
+    color: #482673;
+    padding: 25px;
+    
+  } 
+  
+  a { 
+     color: #482673
+  }
+  
+  
+  h1 {
+    font-style:italic;
+    color:#482673;
+    text-align: center;
+    border: 10px solid;
+    padding-block-start: 10px; 
+    border-image-source: linear-gradient(90deg, hotpink, indigo);
+    border-image-slice: 1;
+  
+  }
+
+  
+  
+  *{
+    font-family: cursive;
+  }
+
+  nav {
+    background:#DA70D6;
+    text-align: center;
+    position: fixed; 
+    z-index: 999;
+    width: 100%;
+    top:0;
+    left:0;
+    padding:5px;
+    
+  } 
+
+  
+
+  /* Scroll bar */
+  ::-webkit-scrollbar{
+    width: 1em; 
+    background: #DA70D6
+}    
+
+::-webkit-scrollbar-track {
+    background: #DA70D6  
+}
+
+::-webkit-scrollbar-thumb {
+    background: #DA70D6
+}
+
+::-webkit-scrollbar-thumb:hover{
+    Background: #482673 
+}
+
+/* image scroll */
+
+.media-scroller {
+   display: grid;
+   gap:var(--size-3);
+   grid-auto-flow: column;
+   grid-auto-columns: 34%;
+   overflow-x: auto; 
+   overscroll-behavior-inline:contain;
+   padding: 10px;
+}
+
+.media-element { 
+  display: grid;
+  grid-template-rows: min-content;
+  gap: var(--size-2);
+  padding: 20px;;
+  background:10px;
+  border-radius: var(--surface-2);
+  box-shadow: 10px;
+}
+
+.media-element > img {
+  inline-size: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.snaps-inline{
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(1rem);
+}
+
+.snaps-inline > *{
+  scroll-snap-align: start;
+}
